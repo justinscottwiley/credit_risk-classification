@@ -2,26 +2,34 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
+
+* The goal of the analysis is to see if you can train a Machine Learning Model from a dataset to predict if several loans are healthy or high-risk.
+  
+* The data that was given was from information such as loan size, interest rate, debt to income.
+   
 * Describe the stages of the machine learning process you went through as part of this analysis.
+  1. Prepare data
+  2. Seperate the data to features such as columns with X and Y or as Labels
+  3. train test split the data
+  4. pick the ml model for classification as logistic regression
+  5. Fit the model with training data
+  6. Use the model to make make predictions with the test data
+  7. Evaluate the results
+     
 * Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+from sklearn.metrics import confusion_matrix, classification_report
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+    * Accuracy: 0.99
+    * Precision Class 0: 1.00, Class 1: 0.85
+    * Recall Class 0: 0.99, Class 1: 0.91
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-
 * Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+    The Logistic Regression model performed well when predicting the outcome of the healthy loans. the presicion was rating at 99%
+    High risk loans would need to be tested and evaluated with more data sets top confirm that it can perform at a higher status.
 
-If you do not recommend any of the models, please justify your reasoning.
